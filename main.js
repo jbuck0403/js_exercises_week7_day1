@@ -26,7 +26,9 @@ arr = ["Max", "Baseball", "Reboot", "Goku", "Trucks", "Rodger"];
 function replaceEvens(arr) {
   arrCopy = [...arr];
   for (let idx = arr.length - 1; idx >= 0; idx--) {
-    arrCopy.splice(idx, 0, "even index");
+    if (idx % 2 == 0) {
+      arrCopy.splice(idx, 1, "even index");
+    }
   }
   return arrCopy;
 }
